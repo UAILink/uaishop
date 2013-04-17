@@ -1,4 +1,4 @@
-UaiShop - CakePHP 1.0.x.1
+UaiShop - CakePHP 1.0.x.1.3
 =================
 
 [![CakePHP](http://cakephp.org/img/cake-logo.png)](http://www.cakephp.org)
@@ -25,6 +25,8 @@ Some Handy Links 123
 
 Get Support!
 ------------
+
+teste
 
 [Our Google Group](http://groups.google.com/group/cake-php) - community mailing list and forum
 
