@@ -1,4 +1,4 @@
-UaiShop - CakePHP 1.0.x
+UaiShop - CakePHP 1.0.x.1
 =================
 
 [![CakePHP](http://cakephp.org/img/cake-logo.png)](http://www.cakephp.org)
