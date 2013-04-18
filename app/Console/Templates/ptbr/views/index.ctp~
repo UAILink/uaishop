@@ -80,14 +80,14 @@ require_once dirname(dirname(__FILE__)) . DS . 'Inflexao.php';
         <div class="actions ym-cbox">
 	        <h3><?php echo "<?php echo __('Ações'); ?>"; ?></h3>
 	        
-		        <?php echo "<?php echo \$this->Html->link(__('Novo " . Inflexao::acentos($singularHumanName) . "'), array('action' => 'add'), array('class'=>'ym-button')); ?>";?>
+		        <?php echo "<?php echo \$this->Html->link(__('Novo " . Inflexao::acentos($singularHumanName) . "'), array('action' => 'add')); ?>";?>
         <?php
 	        $done = array();
 	        foreach ($associations as $type => $data) {
 		        foreach ($data as $alias => $details) {
 			        if ($details['controller'] != $this->name && !in_array($details['controller'], $done)) {
-				        echo "\t\t<?php echo \$this->Html->link(__('Listar " . Inflexao::acentos(Inflector::humanize($details['controller'])) . "'), array('controller' => '{$details['controller']}', 'action' => 'index'), array('class'=>'ym-button')); ?> \n";
-				        echo "\t\t<?php echo \$this->Html->link(__('Novo " . Inflexao::acentos(Inflector::humanize(Inflector::underscore($alias))) . "'), array('controller' => '{$details['controller']}', 'action' => 'add'), array('class'=>'ym-button')); ?> \n";
+				        echo "\t\t<?php echo \$this->Html->link(__('Listar " . Inflexao::acentos(Inflector::humanize($details['controller'])) . "'), array('controller' => '{$details['controller']}', 'action' => 'index')); ?> \n";
+				        echo "\t\t<?php echo \$this->Html->link(__('Novo " . Inflexao::acentos(Inflector::humanize(Inflector::underscore($alias))) . "'), array('controller' => '{$details['controller']}', 'action' => 'add')); ?> \n";
 				        $done[] = $details['controller'];
 			        }
 		        }

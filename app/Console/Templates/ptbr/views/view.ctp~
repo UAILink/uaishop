@@ -105,7 +105,6 @@ foreach ($relations as $alias => $details):
 	<tr>
 <?php
 			foreach ($details['fields'] as $field) {
-			    if(in_array($field, array('created', 'modified', 'updated', 'inativo'))) { continue; }
 				echo "\t\t<th><?php echo __('" . Inflexao::acentos(Inflector::humanize($field)) . "'); ?></th>\n";
 			}
 ?>
@@ -116,7 +115,6 @@ echo "\t<?php
 		foreach (\${$singularVar}['{$alias}'] as \${$otherSingularVar}): ?>\n";
 		echo "\t\t<tr>\n";
 				foreach ($details['fields'] as $field) {
-				if(in_array($field, array('created', 'modified', 'updated', 'inativo'))) { continue; }
 					echo "\t\t\t<td><?php echo \${$otherSingularVar}['{$field}'];?></td>\n";
 				}
 

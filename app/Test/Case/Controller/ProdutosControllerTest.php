@@ -35,7 +35,7 @@ class ProdutosControllerTestCase extends CakeTestCase {
  *
  * @var array
  */
-	public $fixtures = array('app.produto', 'app.classe', 'app.categoria', 'app.caracteristica', 'app.tipo_dado', 'app.valor', 'app.marca');
+	public $fixtures = array('app.produto', 'app.contrato', 'app.pessoa', 'app.ramo_atividade', 'app.tipo_pessoa', 'app.conta_corrente', 'app.pessoas_conta_corrente', 'app.contato', 'app.pessoas_contato', 'app.documento', 'app.pessoas_documento', 'app.endereco', 'app.pessoas_endereco', 'app.iteracao', 'app.pessoas_iteracao', 'app.tipo');
 
 /**
  * setUp method
