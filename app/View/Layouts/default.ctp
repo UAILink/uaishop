@@ -83,7 +83,7 @@
 <div>		
     <?php echo $this->Session->flash(); ?>
 </div>
-<div id="main" style="padding-bottom: 30px;background-color: #DDDDDD">		
+<div id="main" class="container" style="">		
     <?php echo $this->fetch('content'); ?>
 </div>
     
