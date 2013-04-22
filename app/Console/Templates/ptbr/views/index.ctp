@@ -17,11 +17,37 @@
  */
 require_once dirname(dirname(__FILE__)) . DS . 'Inflexao.php';
 ?>
-<div class="ym-column">
-    <div class="ym-col1" >
-        <div class="<?php echo $pluralVar; ?> index ym-cbox">
+<div class="row-fluid">
+    <div class="span4">
+        <div class="actions well">
+        
+	        <ul class="nav nav-list">
+	        
+	        	<li class='nav-header'><?php echo "<?php echo __('Ações'); ?>"; ?></li>
+        
+		        <?php echo "<li><?php echo \$this->Html->link(__('Novo " . Inflexao::acentos($singularHumanName) . "'), array('action' => 'add')); ?></li>";?>
+        <?php
+	        $done = array();
+	        foreach ($associations as $type => $data) {
+		        foreach ($data as $alias => $details) {
+			        if ($details['controller'] != $this->name && !in_array($details['controller'], $done)) {
+				        echo "<li class='nav-header'><?php echo __('" . Inflexao::acentos(Inflector::humanize($details['controller'])) . "'); ?></li>";
+						echo "\t\t<li><?php echo \$this->Html->link(__('Listar " . Inflexao::acentos(Inflector::humanize($details['controller'])) . "'), array('controller' => '{$details['controller']}', 'action' => 'index')); ?></li> \n";
+				        echo "\t\t<li><?php echo \$this->Html->link(__('Novo " . Inflexao::acentos(Inflector::humanize(Inflector::underscore($alias))) . "'), array('controller' => '{$details['controller']}', 'action' => 'add')); ?></li> \n";
+				        $done[] = $details['controller'];
+			        }
+		        }
+	        }
+        ?>
+        
+        	</ul>
+	        
+        </div>
+    </div>
+    <div class="span8" >
+        <div class="<?php echo $pluralVar; ?> index">
 	        <h2><?php echo "<?php echo __('" . Inflexao::acentos($pluralHumanName) . "');?>";?></h2>
-	        <table cellpadding="0" cellspacing="0">
+	        <table class="table table-striped">
 	        <tr>
 	        <?php  foreach ($fields as $field):?>
 		        <th><?php echo "<?php echo \$this->Paginator->sort('{$field}');?>";?></th>
@@ -76,24 +102,5 @@ require_once dirname(dirname(__FILE__)) . DS . 'Inflexao.php';
 	        </div>
         </div>
     </div>
-    <div class="ym-col3">
-        <div class="actions ym-cbox">
-	        <h3><?php echo "<?php echo __('Ações'); ?>"; ?></h3>
-	        
-		        <?php echo "<?php echo \$this->Html->link(__('Novo " . Inflexao::acentos($singularHumanName) . "'), array('action' => 'add'), array('class'=>'ym-button')); ?>";?>
-        <?php
-	        $done = array();
-	        foreach ($associations as $type => $data) {
-		        foreach ($data as $alias => $details) {
-			        if ($details['controller'] != $this->name && !in_array($details['controller'], $done)) {
-				        echo "\t\t<?php echo \$this->Html->link(__('Listar " . Inflexao::acentos(Inflector::humanize($details['controller'])) . "'), array('controller' => '{$details['controller']}', 'action' => 'index'), array('class'=>'ym-button')); ?> \n";
-				        echo "\t\t<?php echo \$this->Html->link(__('Novo " . Inflexao::acentos(Inflector::humanize(Inflector::underscore($alias))) . "'), array('controller' => '{$details['controller']}', 'action' => 'add'), array('class'=>'ym-button')); ?> \n";
-				        $done[] = $details['controller'];
-			        }
-		        }
-	        }
-        ?>
-	        </ul>
-        </div>
-    </div>
+    
 </div>

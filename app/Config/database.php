@@ -65,7 +65,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => 'mysql',
-		'database' => 'crm',
+		'database' => 'uaishop',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);

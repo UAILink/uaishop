@@ -7,24 +7,3 @@ nav .ym-hlist ul li a:hover {
     background: #666;
     background: rgba(255, 255, 255, .07);
 }
-
-.shop-items{	
-	margin-top: 2em;
-}
-.shop-items > div {	
-	border: solid 1px #ccc;
-	box-shadow: 0 0 3px #ccc;
-	background-color: white;
-	padding: 5px 0 5px 0;
-}
-
-.box {	
-	border: solid 1px #ccc;
-	box-shadow: 0 0 3px #ccc;
-	background-color: white;
-	padding: 5px;
-}
-
-footer{
-	color:#999999
-}
