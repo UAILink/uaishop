@@ -30,7 +30,8 @@
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
-		echo $this->Html->css('bootstrap');		
+		echo $this->Html->css('bootstrap');	
+		echo $this->Html->css('bootstrap-responsive');
 		echo $this->Html->css('cake.generic');
 		echo $this->Html->css('site');		
 		echo $this->Html->css('flexslider');
@@ -41,6 +42,13 @@
 		
 		
 	?>
+	
+	<style type="text/css">
+      body {
+        padding-top: 41px;
+        
+      }
+    </style>
 
 	<!-- Mobile viewport optimisation -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,47 +59,78 @@
 	
 </head>
 <body>
-<header>
-	<div class="container">
 
-			<h1>Project Title</h1>
-
-	</div>
-</header>
 
 <div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="brand" href="#">Project name</a>
-      <div class="nav-collapse collapse">
-        <ul class="nav">
-            <?php echo $this->element('menu'); ?>			    
-        </ul>
-        <form class="navbar-search pull-right">
-		    <input class="search-query" type="search" placeholder="Pesquise aqui seu produto..." />
-		    <input class="btn" type="submit" value="Pesquisar" />
-	    </form>
-      </div><!--/.nav-collapse -->
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">UAIShop</a>
+          <div class="nav-collapse collapse">            
+              <?php echo $this->element('menu');?>            
+            <form class="navbar-search pull-right">
+              <input class="search-query" type="text" placeholder="Digite o produto">              
+              <button type="submit" class="btn">Pesquisar</button>
+            </form>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-
-<div id="main" class="container">
-		
+<div>		
     <?php echo $this->Session->flash(); ?>
-
-    <?php echo $this->fetch('content'); ?>
-
 </div>
-<footer>
+<div id="main" style="padding-bottom: 30px;background-color: #DDDDDD">		
+    <?php echo $this->fetch('content'); ?>
+</div>
+    
+
+<footer style="background-color: black; height: 20em; padding-top: 20px;">
 	<div class="container">
-    	<p>© Company 2013 &ndash; <a href="http://www.uailink.com.br">UAILink Marketing Digital</a></p>
+    	<div class="row">
+    		<div class="span3">
+    			<h4>Institucional</h4>
+    			<ul>
+    				<li>UaiShop</li>
+    				<li>Quem Somos?</li>
+    				<li>Contato</li>
+    				<li>Sua Conta</li>
+    				<li>Produtos</li>
+    				<li>Setores</li>
+    			</ul>
+    		</div>
+    		<div class="span3">
+    			<h4>Entre em Contato</h4>
+    			<ul>
+    				<li>Ligue: 0800 889955</li>
+    				<li>Sac: 0800 123456</li>
+    				<li>contato@uaishop.com.br</li>    				
+    			</ul>
+    		</div>
+    		<div class="span3">
+    			<h4>Setores</h4>
+    			<ul>
+    				<li>informatica</li>
+    				<li>Eletrônicos</li>
+    				<li>Casa</li>
+    				<li>Jardim</li>
+    				<li>Construção</li>
+    				<li>Brinquedos</li>
+    			</ul>
+    		</div>
+    		<div class="span3">
+    			<h4>Destaques</h4>
+    			<ul>
+    				<li>Redes Sociais</li>
+    				<li>Política de Privacidade</li>
+    				<li>Fale Conosco</li>
+    				
+    			</ul>
+    		</div>
+    	</div>
 	</div>
 </footer>
 

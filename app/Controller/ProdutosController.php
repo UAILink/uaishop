@@ -8,6 +8,11 @@ App::uses('AppController', 'Controller');
 class ProdutosController extends AppController {
 
 
+	public function produto($codProduto) {
+	
+	}
+	
+	
 /**
  * index method
  *
