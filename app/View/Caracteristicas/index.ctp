@@ -6,10 +6,8 @@
 	        
 	        	<li class='nav-header'><?php echo __('Ações'); ?></li>
         
-		        <li><?php echo $this->Html->link(__('Novo Caracteristica'), array('action' => 'add')); ?></li>        <li class='nav-header'><?php echo __('Tipo Dados'); ?></li>		<li><?php echo $this->Html->link(__('Listar Tipo Dados'), array('controller' => 'tipo_dados', 'action' => 'index')); ?></li> 
-		<li><?php echo $this->Html->link(__('Novo Tipo Dado'), array('controller' => 'tipo_dados', 'action' => 'add')); ?></li> 
-<li class='nav-header'><?php echo __('Classes'); ?></li>		<li><?php echo $this->Html->link(__('Listar Classes'), array('controller' => 'classes', 'action' => 'index')); ?></li> 
-		<li><?php echo $this->Html->link(__('Novo Classe'), array('controller' => 'classes', 'action' => 'add')); ?></li> 
+		        <li><?php echo $this->Html->link(__('Novo Caracteristica'), array('action' => 'add')); ?></li>        <li class='nav-header'><?php echo __('Caracteristica Produtos'); ?></li>		<li><?php echo $this->Html->link(__('Listar Caracteristica Produtos'), array('controller' => 'caracteristica_produtos', 'action' => 'index')); ?></li> 
+		<li><?php echo $this->Html->link(__('Novo Caracteristica Produto'), array('controller' => 'caracteristica_produtos', 'action' => 'add')); ?></li> 
 <li class='nav-header'><?php echo __('Valores'); ?></li>		<li><?php echo $this->Html->link(__('Listar Valores'), array('controller' => 'valores', 'action' => 'index')); ?></li> 
 		<li><?php echo $this->Html->link(__('Novo Valor'), array('controller' => 'valores', 'action' => 'add')); ?></li> 
         
@@ -23,16 +21,12 @@
 	        <table class="table table-striped">
 	        <tr>
 	        		        <th><?php echo $this->Paginator->sort('id');?></th>
-	        		        <th><?php echo $this->Paginator->sort('tipo_dado_id');?></th>
 	        		        <th><?php echo $this->Paginator->sort('descricao');?></th>
 	        		        <th class="actions"><?php echo __('Ações');?></th>
 	        </tr>
 	        <?php foreach ($caracteristicas as $caracteristica): ?>
 	<tr>
 		<td><?php echo h($caracteristica['Caracteristica']['id']); ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($caracteristica['TipoDado']['descricao'], array('controller' => 'tipo_dados', 'action' => 'view', $caracteristica['TipoDado']['id'])); ?>
-		</td>
 		<td><?php echo h($caracteristica['Caracteristica']['descricao']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $caracteristica['Caracteristica']['id'])); ?>

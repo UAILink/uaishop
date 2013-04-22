@@ -40,7 +40,7 @@
 		</td>
 		</tr>		<tr>			<td><?php echo __('Categoria'); ?></td>
 			<td>
-			<?php echo $this->Html->link($tipoProduto['Categoria']['descricao'], array('controller' => 'categorias', 'action' => 'view', $tipoProduto['Categoria']['id'])); ?>
+			<?php echo $this->Html->link($tipoProduto['Categoria']['id'], array('controller' => 'categorias', 'action' => 'view', $tipoProduto['Categoria']['id'])); ?>
 			&nbsp;
 		</td>
 		</tr>		<tr>			<td><?php echo __('Descrição'); ?></td>

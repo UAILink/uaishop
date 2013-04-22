@@ -11,8 +11,8 @@
         
         		        <li><?php echo $this->Form->postLink(__('Excluir'), array('action' => 'delete', $this->Form->value('Categoria.id')), array('class'=>''), __('Você tem certeza que deseja excluir o # %s?', $this->Form->value('Categoria.id'))); ?></li>
         		        <li><?php echo $this->Html->link(__('Listar Categorias'), array('action' => 'index'), array('class'=>''));?></li>
-        <li class='nav-header'><?php echo __('Classes'); ?></li>		<li><?php echo $this->Html->link(__('Listar Classes'), array('controller' => 'classes', 'action' => 'index'), array('class'=>'')); ?></li> 
-		<li><?php echo $this->Html->link(__('Novo Classe'), array('controller' => 'classes', 'action' => 'add'), array('class'=>'')); ?></li> 
+        <li class='nav-header'><?php echo __('Tipo Produtos'); ?></li>		<li><?php echo $this->Html->link(__('Listar Tipo Produtos'), array('controller' => 'tipo_produtos', 'action' => 'index'), array('class'=>'')); ?></li> 
+		<li><?php echo $this->Html->link(__('Novo Tipo Produto'), array('controller' => 'tipo_produtos', 'action' => 'add'), array('class'=>'')); ?></li> 
         
         </ul>
 	 

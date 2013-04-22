@@ -38,12 +38,12 @@
 		</td>
 		</tr>		<tr>			<td><?php echo __('Tipo Produto'); ?></td>
 			<td>
-			<?php echo $this->Html->link($caracteristicaProduto['TipoProduto']['descricao'], array('controller' => 'tipo_produtos', 'action' => 'view', $caracteristicaProduto['TipoProduto']['id'])); ?>
+			<?php echo $this->Html->link($caracteristicaProduto['TipoProduto']['id'], array('controller' => 'tipo_produtos', 'action' => 'view', $caracteristicaProduto['TipoProduto']['id'])); ?>
 			&nbsp;
 		</td>
 		</tr>		<tr>			<td><?php echo __('Caracteristica'); ?></td>
 			<td>
-			<?php echo $this->Html->link($caracteristicaProduto['Caracteristica']['descricao'], array('controller' => 'caracteristicas', 'action' => 'view', $caracteristicaProduto['Caracteristica']['id'])); ?>
+			<?php echo $this->Html->link($caracteristicaProduto['Caracteristica']['id'], array('controller' => 'caracteristicas', 'action' => 'view', $caracteristicaProduto['Caracteristica']['id'])); ?>
 			&nbsp;
 		</td>
 		</tr>        </tbody>	

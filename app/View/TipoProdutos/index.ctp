@@ -31,7 +31,7 @@
 	<tr>
 		<td><?php echo h($tipoProduto['TipoProduto']['id']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($tipoProduto['Categoria']['descricao'], array('controller' => 'categorias', 'action' => 'view', $tipoProduto['Categoria']['id'])); ?>
+			<?php echo $this->Html->link($tipoProduto['Categoria']['id'], array('controller' => 'categorias', 'action' => 'view', $tipoProduto['Categoria']['id'])); ?>
 		</td>
 		<td><?php echo h($tipoProduto['TipoProduto']['descricao']); ?>&nbsp;</td>
 		<td class="actions">

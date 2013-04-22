@@ -6,8 +6,8 @@
 	        
 	        	<li class='nav-header'><?php echo __('Ações'); ?></li>
         
-		        <li><?php echo $this->Html->link(__('Novo Categoria'), array('action' => 'add')); ?></li>        <li class='nav-header'><?php echo __('Classes'); ?></li>		<li><?php echo $this->Html->link(__('Listar Classes'), array('controller' => 'classes', 'action' => 'index')); ?></li> 
-		<li><?php echo $this->Html->link(__('Novo Classe'), array('controller' => 'classes', 'action' => 'add')); ?></li> 
+		        <li><?php echo $this->Html->link(__('Novo Categoria'), array('action' => 'add')); ?></li>        <li class='nav-header'><?php echo __('Tipo Produtos'); ?></li>		<li><?php echo $this->Html->link(__('Listar Tipo Produtos'), array('controller' => 'tipo_produtos', 'action' => 'index')); ?></li> 
+		<li><?php echo $this->Html->link(__('Novo Tipo Produto'), array('controller' => 'tipo_produtos', 'action' => 'add')); ?></li> 
         
         	</ul>
 	        

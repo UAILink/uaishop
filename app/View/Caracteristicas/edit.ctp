@@ -11,10 +11,8 @@
         
         		        <li><?php echo $this->Form->postLink(__('Excluir'), array('action' => 'delete', $this->Form->value('Caracteristica.id')), array('class'=>''), __('Você tem certeza que deseja excluir o # %s?', $this->Form->value('Caracteristica.id'))); ?></li>
         		        <li><?php echo $this->Html->link(__('Listar Caracteristicas'), array('action' => 'index'), array('class'=>''));?></li>
-        <li class='nav-header'><?php echo __('Tipo Dados'); ?></li>		<li><?php echo $this->Html->link(__('Listar Tipo Dados'), array('controller' => 'tipo_dados', 'action' => 'index'), array('class'=>'')); ?></li> 
-		<li><?php echo $this->Html->link(__('Novo Tipo Dado'), array('controller' => 'tipo_dados', 'action' => 'add'), array('class'=>'')); ?></li> 
-<li class='nav-header'><?php echo __('Classes'); ?></li>		<li><?php echo $this->Html->link(__('Listar Classes'), array('controller' => 'classes', 'action' => 'index'), array('class'=>'')); ?></li> 
-		<li><?php echo $this->Html->link(__('Novo Classe'), array('controller' => 'classes', 'action' => 'add'), array('class'=>'')); ?></li> 
+        <li class='nav-header'><?php echo __('Caracteristica Produtos'); ?></li>		<li><?php echo $this->Html->link(__('Listar Caracteristica Produtos'), array('controller' => 'caracteristica_produtos', 'action' => 'index'), array('class'=>'')); ?></li> 
+		<li><?php echo $this->Html->link(__('Novo Caracteristica Produto'), array('controller' => 'caracteristica_produtos', 'action' => 'add'), array('class'=>'')); ?></li> 
 <li class='nav-header'><?php echo __('Valores'); ?></li>		<li><?php echo $this->Html->link(__('Listar Valores'), array('controller' => 'valores', 'action' => 'index'), array('class'=>'')); ?></li> 
 		<li><?php echo $this->Html->link(__('Novo Valor'), array('controller' => 'valores', 'action' => 'add'), array('class'=>'')); ?></li> 
         
@@ -47,7 +45,6 @@
 		        <h6><?php echo __('Dados Caracteristica'); ?></h6>
         	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('tipo_dado_id');
 		echo $this->Form->input('descricao');
 	?>
 	    

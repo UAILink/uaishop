@@ -6,12 +6,6 @@ App::uses('AppModel', 'Model');
  * @property Produto $Produto
  */
 class Marca extends AppModel {
-/**
- * Display field
- *
- * @var string
- */
-	public $displayField = 'descricao';
 
 	// As associações abaixo foram criadas com todas as chaves possíveis, então é possível remover as que não são necessárias
 

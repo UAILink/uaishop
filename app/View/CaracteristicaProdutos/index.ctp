@@ -29,10 +29,10 @@
 	<tr>
 		<td><?php echo h($caracteristicaProduto['CaracteristicaProduto']['id']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($caracteristicaProduto['TipoProduto']['descricao'], array('controller' => 'tipo_produtos', 'action' => 'view', $caracteristicaProduto['TipoProduto']['id'])); ?>
+			<?php echo $this->Html->link($caracteristicaProduto['TipoProduto']['id'], array('controller' => 'tipo_produtos', 'action' => 'view', $caracteristicaProduto['TipoProduto']['id'])); ?>
 		</td>
 		<td>
-			<?php echo $this->Html->link($caracteristicaProduto['Caracteristica']['descricao'], array('controller' => 'caracteristicas', 'action' => 'view', $caracteristicaProduto['Caracteristica']['id'])); ?>
+			<?php echo $this->Html->link($caracteristicaProduto['Caracteristica']['id'], array('controller' => 'caracteristicas', 'action' => 'view', $caracteristicaProduto['Caracteristica']['id'])); ?>
 		</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $caracteristicaProduto['CaracteristicaProduto']['id'])); ?>

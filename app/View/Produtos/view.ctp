@@ -10,10 +10,10 @@
 		<li><?php echo $this->Form->postLink(__('Excluir Produto'), array('action' => 'delete', $produto['Produto']['id']), array('class'=>'ym-button'), __('Você tem certeza que deseja excluir o # %s?', $produto['Produto']['id'])); ?></li> 
 		<li><?php echo $this->Html->link(__('Listar Produtos'), array('action' => 'index'), array('class'=>'ym-button')); ?></li> 
 		<li><?php echo $this->Html->link(__('Novo Produto'), array('action' => 'add'), array('class'=>'ym-button')); ?></li> 
-<li class='nav-header'><?php echo __('Classes'); ?></li>		<li><?php echo $this->Html->link(__('Listar Classes'), array('controller' => 'classes', 'action' => 'index'), array('class'=>'ym-button')); ?></li> 
-		<li><?php echo $this->Html->link(__('Novo Classe'), array('controller' => 'classes', 'action' => 'add'), array('class'=>'ym-button')); ?></li> 
 <li class='nav-header'><?php echo __('Marcas'); ?></li>		<li><?php echo $this->Html->link(__('Listar Marcas'), array('controller' => 'marcas', 'action' => 'index'), array('class'=>'ym-button')); ?></li> 
 		<li><?php echo $this->Html->link(__('Novo Marca'), array('controller' => 'marcas', 'action' => 'add'), array('class'=>'ym-button')); ?></li> 
+<li class='nav-header'><?php echo __('Tipo Produtos'); ?></li>		<li><?php echo $this->Html->link(__('Listar Tipo Produtos'), array('controller' => 'tipo_produtos', 'action' => 'index'), array('class'=>'ym-button')); ?></li> 
+		<li><?php echo $this->Html->link(__('Novo Tipo Produto'), array('controller' => 'tipo_produtos', 'action' => 'add'), array('class'=>'ym-button')); ?></li> 
 </ul>
    </div>
 </div>
@@ -36,14 +36,9 @@
 			<?php echo h($produto['Produto']['id']); ?>
 			&nbsp;
 		</td>
-		</tr>		<tr>			<td><?php echo __('Classe'); ?></td>
-			<td>
-			<?php echo $this->Html->link($produto['Classe']['caracteristica_id'], array('controller' => 'classes', 'action' => 'view', $produto['Classe']['id'])); ?>
-			&nbsp;
-		</td>
 		</tr>		<tr>			<td><?php echo __('Marca'); ?></td>
 			<td>
-			<?php echo $this->Html->link($produto['Marca']['descricao'], array('controller' => 'marcas', 'action' => 'view', $produto['Marca']['id'])); ?>
+			<?php echo $this->Html->link($produto['Marca']['id'], array('controller' => 'marcas', 'action' => 'view', $produto['Marca']['id'])); ?>
 			&nbsp;
 		</td>
 		</tr>		<tr>			<td><?php echo __('Nome'); ?></td>
@@ -54,6 +49,11 @@
 		</tr>		<tr>			<td><?php echo __('Descrição'); ?></td>
 			<td>
 			<?php echo h($produto['Produto']['descricao']); ?>
+			&nbsp;
+		</td>
+		</tr>		<tr>			<td><?php echo __('Tipo Produto'); ?></td>
+			<td>
+			<?php echo $this->Html->link($produto['TipoProduto']['id'], array('controller' => 'tipo_produtos', 'action' => 'view', $produto['TipoProduto']['id'])); ?>
 			&nbsp;
 		</td>
 		</tr>        </tbody>	

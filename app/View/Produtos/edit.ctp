@@ -11,10 +11,10 @@
         
         		        <li><?php echo $this->Form->postLink(__('Excluir'), array('action' => 'delete', $this->Form->value('Produto.id')), array('class'=>''), __('Você tem certeza que deseja excluir o # %s?', $this->Form->value('Produto.id'))); ?></li>
         		        <li><?php echo $this->Html->link(__('Listar Produtos'), array('action' => 'index'), array('class'=>''));?></li>
-        <li class='nav-header'><?php echo __('Classes'); ?></li>		<li><?php echo $this->Html->link(__('Listar Classes'), array('controller' => 'classes', 'action' => 'index'), array('class'=>'')); ?></li> 
-		<li><?php echo $this->Html->link(__('Novo Classe'), array('controller' => 'classes', 'action' => 'add'), array('class'=>'')); ?></li> 
-<li class='nav-header'><?php echo __('Marcas'); ?></li>		<li><?php echo $this->Html->link(__('Listar Marcas'), array('controller' => 'marcas', 'action' => 'index'), array('class'=>'')); ?></li> 
+        <li class='nav-header'><?php echo __('Marcas'); ?></li>		<li><?php echo $this->Html->link(__('Listar Marcas'), array('controller' => 'marcas', 'action' => 'index'), array('class'=>'')); ?></li> 
 		<li><?php echo $this->Html->link(__('Novo Marca'), array('controller' => 'marcas', 'action' => 'add'), array('class'=>'')); ?></li> 
+<li class='nav-header'><?php echo __('Tipo Produtos'); ?></li>		<li><?php echo $this->Html->link(__('Listar Tipo Produtos'), array('controller' => 'tipo_produtos', 'action' => 'index'), array('class'=>'')); ?></li> 
+		<li><?php echo $this->Html->link(__('Novo Tipo Produto'), array('controller' => 'tipo_produtos', 'action' => 'add'), array('class'=>'')); ?></li> 
         
         </ul>
 	 
@@ -45,10 +45,10 @@
 		        <h6><?php echo __('Dados Produto'); ?></h6>
         	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('classe_id');
 		echo $this->Form->input('marca_id');
 		echo $this->Form->input('nome');
 		echo $this->Form->input('descricao');
+		echo $this->Form->input('tipo_produto_id');
 	?>
 	    
 	        <div class="">

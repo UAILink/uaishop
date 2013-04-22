@@ -3,15 +3,9 @@ App::uses('AppModel', 'Model');
 /**
  * Categoria Model
  *
- * @property Classe $Classe
+ * @property TipoProduto $TipoProduto
  */
 class Categoria extends AppModel {
-/**
- * Display field
- *
- * @var string
- */
-	public $displayField = 'descricao';
 
 	// As associações abaixo foram criadas com todas as chaves possíveis, então é possível remover as que não são necessárias
 
@@ -21,8 +15,8 @@ class Categoria extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-		'Classe' => array(
-			'className' => 'Classe',
+		'TipoProduto' => array(
+			'className' => 'TipoProduto',
 			'foreignKey' => 'categoria_id',
 			'dependent' => false,
 			'conditions' => '',

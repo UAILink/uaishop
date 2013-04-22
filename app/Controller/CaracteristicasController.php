@@ -47,8 +47,6 @@ class CaracteristicasController extends AppController {
 				$this->Session->setFlash(__('O caracteristica não pode ser salvo. Por favor, tente novamente.'));
 			}
 		}
-		$tipoDados = $this->Caracteristica->TipoDado->find('list');
-		$this->set(compact('tipoDados'));
 	}
 
 /**
@@ -72,8 +70,6 @@ class CaracteristicasController extends AppController {
 		} else {
 			$this->request->data = $this->Caracteristica->read(null, $id);
 		}
-		$tipoDados = $this->Caracteristica->TipoDado->find('list');
-		$this->set(compact('tipoDados'));
 	}
 
 /**

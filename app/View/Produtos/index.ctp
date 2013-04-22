@@ -6,10 +6,10 @@
 	        
 	        	<li class='nav-header'><?php echo __('Ações'); ?></li>
         
-		        <li><?php echo $this->Html->link(__('Novo Produto'), array('action' => 'add')); ?></li>        <li class='nav-header'><?php echo __('Classes'); ?></li>		<li><?php echo $this->Html->link(__('Listar Classes'), array('controller' => 'classes', 'action' => 'index')); ?></li> 
-		<li><?php echo $this->Html->link(__('Novo Classe'), array('controller' => 'classes', 'action' => 'add')); ?></li> 
-<li class='nav-header'><?php echo __('Marcas'); ?></li>		<li><?php echo $this->Html->link(__('Listar Marcas'), array('controller' => 'marcas', 'action' => 'index')); ?></li> 
+		        <li><?php echo $this->Html->link(__('Novo Produto'), array('action' => 'add')); ?></li>        <li class='nav-header'><?php echo __('Marcas'); ?></li>		<li><?php echo $this->Html->link(__('Listar Marcas'), array('controller' => 'marcas', 'action' => 'index')); ?></li> 
 		<li><?php echo $this->Html->link(__('Novo Marca'), array('controller' => 'marcas', 'action' => 'add')); ?></li> 
+<li class='nav-header'><?php echo __('Tipo Produtos'); ?></li>		<li><?php echo $this->Html->link(__('Listar Tipo Produtos'), array('controller' => 'tipo_produtos', 'action' => 'index')); ?></li> 
+		<li><?php echo $this->Html->link(__('Novo Tipo Produto'), array('controller' => 'tipo_produtos', 'action' => 'add')); ?></li> 
         
         	</ul>
 	        
@@ -21,23 +21,23 @@
 	        <table class="table table-striped">
 	        <tr>
 	        		        <th><?php echo $this->Paginator->sort('id');?></th>
-	        		        <th><?php echo $this->Paginator->sort('classe_id');?></th>
 	        		        <th><?php echo $this->Paginator->sort('marca_id');?></th>
 	        		        <th><?php echo $this->Paginator->sort('nome');?></th>
 	        		        <th><?php echo $this->Paginator->sort('descricao');?></th>
+	        		        <th><?php echo $this->Paginator->sort('tipo_produto_id');?></th>
 	        		        <th class="actions"><?php echo __('Ações');?></th>
 	        </tr>
 	        <?php foreach ($produtos as $produto): ?>
 	<tr>
 		<td><?php echo h($produto['Produto']['id']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($produto['Classe']['caracteristica_id'], array('controller' => 'classes', 'action' => 'view', $produto['Classe']['id'])); ?>
-		</td>
-		<td>
-			<?php echo $this->Html->link($produto['Marca']['descricao'], array('controller' => 'marcas', 'action' => 'view', $produto['Marca']['id'])); ?>
+			<?php echo $this->Html->link($produto['Marca']['id'], array('controller' => 'marcas', 'action' => 'view', $produto['Marca']['id'])); ?>
 		</td>
 		<td><?php echo h($produto['Produto']['nome']); ?>&nbsp;</td>
 		<td><?php echo h($produto['Produto']['descricao']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($produto['TipoProduto']['id'], array('controller' => 'tipo_produtos', 'action' => 'view', $produto['TipoProduto']['id'])); ?>
+		</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $produto['Produto']['id'])); ?>
 			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $produto['Produto']['id'])); ?>

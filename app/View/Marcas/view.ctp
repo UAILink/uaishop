@@ -54,20 +54,20 @@
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
 		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Classe Id'); ?></th>
 		<th><?php echo __('Marca Id'); ?></th>
 		<th><?php echo __('Nome'); ?></th>
 		<th><?php echo __('Descrição'); ?></th>
+		<th><?php echo __('Tipo Produto Id'); ?></th>
 		<th class="actions"><?php echo __('Ações');?></th>
 	</tr>
 	<?php
 		foreach ($marca['Produto'] as $produto): ?>
 		<tr>
 			<td><?php echo $produto['id'];?></td>
-			<td><?php echo $produto['classe_id'];?></td>
 			<td><?php echo $produto['marca_id'];?></td>
 			<td><?php echo $produto['nome'];?></td>
 			<td><?php echo $produto['descricao'];?></td>
+			<td><?php echo $produto['tipo_produto_id'];?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('Ver'), array('controller' => 'produtos', 'action' => 'view', $produto['id'])); ?>
 				<?php echo $this->Html->link(__('Editar'), array('controller' => 'produtos', 'action' => 'edit', $produto['id'])); ?>

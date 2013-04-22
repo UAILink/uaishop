@@ -47,9 +47,11 @@ class ProdutosController extends AppController {
 				$this->Session->setFlash(__('O produto não pode ser salvo. Por favor, tente novamente.'));
 			}
 		}
-		$classes = $this->Produto->Classe->find('list');
 		$marcas = $this->Produto->Marca->find('list');
-		$this->set(compact('classes', 'marcas'));
+		$tipoProdutos = $this->Produto->TipoProduto->find('list');
+		$caracteristicas = $this->Produto->Caracteristica->find('list');
+		$tipos = $this->Produto->Tipo->find('list');
+		$this->set(compact('marcas', 'tipoProdutos', 'caracteristicas', 'tipos'));
 	}
 
 /**
@@ -73,9 +75,11 @@ class ProdutosController extends AppController {
 		} else {
 			$this->request->data = $this->Produto->read(null, $id);
 		}
-		$classes = $this->Produto->Classe->find('list');
 		$marcas = $this->Produto->Marca->find('list');
-		$this->set(compact('classes', 'marcas'));
+		$tipoProdutos = $this->Produto->TipoProduto->find('list');
+		$caracteristicas = $this->Produto->Caracteristica->find('list');
+		$tipos = $this->Produto->Tipo->find('list');
+		$this->set(compact('marcas', 'tipoProdutos', 'caracteristicas', 'tipos'));
 	}
 
 /**
