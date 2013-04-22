@@ -81,7 +81,7 @@ require_once dirname(dirname(__FILE__)) . DS . 'Inflexao.php';
     <div class="ym-col3" >
     
         <div class="actions ym-cbox">
-	        <h4><?php echo "<?php echo __('Ações'); ?>"; ?></h4>
+	        <h3><?php echo "<?php echo __('Ações'); ?>"; ?></h3>
 	 
 
         <?php if (strpos($action, 'add') === false): ?>

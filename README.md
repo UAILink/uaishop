@@ -1,4 +1,4 @@
-UaiShop - CakePHP 1.0.x.1.2
+UaiShop - CakePHP 1.0.x.1.3
 =================
 
 [![CakePHP](http://cakephp.org/img/cake-logo.png)](http://www.cakephp.org)
@@ -6,7 +6,7 @@ UaiShop - CakePHP 1.0.x.1.2
 CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC.
 Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility.
 
-Some Handy Links 
+Some Handy Links 1
 ----------------
 
 [CakePHP](http://www.cakephp.org) - The rapid development PHP framework
@@ -25,7 +25,7 @@ Some Handy Links
 
 Get Support!
 ------------
-
+teste
 [Our Google Group](http://groups.google.com/group/cake-php) - community mailing list and forum
 
 [#cakephp](http://webchat.freenode.net/?channels=#cakephp) on irc.freenode.net - Come chat with us, we have cake.

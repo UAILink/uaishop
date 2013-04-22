@@ -47,7 +47,7 @@ class AppController extends Controller {
         public $helpers = array('Js' => array('Jquery'), 'Formatacao', 'SiteURL');                
 
         public function beforeFilter() {
-            $this->Auth->allow('index', 'view', 'display', 'add', 'view', 'edit');
+            $this->Auth->allow('index', 'view', 'display', 'produto');
         }
         
 
